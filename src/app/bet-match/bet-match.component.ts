@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetMatchComponent implements OnInit {
 
+  fakeArray = new Array(3);
+
   constructor() { }
 
   ngOnInit(): void {

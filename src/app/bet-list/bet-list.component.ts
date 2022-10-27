@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bet-list.component.scss']
 })
 export class BetListComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
