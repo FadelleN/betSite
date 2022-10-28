@@ -1,8 +1,2 @@
 <h5>Liste des paris - Football</h5>
-<div class="row">
-    <div class="col">
-        <img src="../../assets/bet.png" alt="pictogramme de pays">
-        <span><b> &nbsp; Nice - FC Lorient &nbsp;</b></span>
-    </div>
-    <app-bet-match class="col"></app-bet-match>
-</div>
+<app-bet-match *ngFor="let a of fakeArray; let index = index"></app-bet-match>
