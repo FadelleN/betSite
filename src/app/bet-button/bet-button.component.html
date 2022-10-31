@@ -1,1 +1,2 @@
-<button type="button" class="btn btn-warning w-100" (click)="chooseBet()" [ngClass]="{ 'btn-dark btn-clicked' : clicked , 'btn-warning': !clicked }">Nice <br> 1.24</button>
+<button type="button" class="btn w-100 btn-warning" (click)="chooseBet()"
+    [ngClass]="{ 'btn-dark btn-clicked' : clicked , 'btn-warning': !clicked }">{{ betButton.town }} <br> {{ betButton.odd }}</button>

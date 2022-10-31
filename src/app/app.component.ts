@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BetButton } from './models/bet-button.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  betButtons!:  BetButton[];
   title = 'betSite';
+
+  ngOnInit(): void {
+    
+  }
 }

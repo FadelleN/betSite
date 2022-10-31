@@ -1,9 +1,7 @@
 <div class="row mt-4 p-2 bg-white rounded match-text">
     <div class="col-6">
         <img src="../../assets/bet.png" alt="pictogramme de pays">
-        <span><b> &nbsp; Nice - FC Lorient &nbsp;</b></span>
+        <span><b> &nbsp; {{ betMatch.name }} &nbsp;</b></span>
     </div>
-    <div *ngFor="let a of fakeArray; let index = index" class="col-2 text-center">
-        <app-bet-button></app-bet-button>
-    </div>
+    <app-bet-button class="col-2 text-center" *ngFor="let betButton of betMatch.betButtons" [betButton]="betButton"></app-bet-button>
 </div>

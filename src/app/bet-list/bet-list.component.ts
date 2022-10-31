@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BetMatch } from '../models/bet-match.model';
+import { BetMatchService } from '../service/bet-match.service';
 
 @Component({
   selector: 'app-bet-list',
@@ -7,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetListComponent implements OnInit {
 
-  fakeArray = new Array(3);
+  betMatchs!: BetMatch[];
 
-  constructor() { }
+  constructor(private betMatchService: BetMatchService) { }
 
   ngOnInit(): void {
-
+    this.betMatchs = this.betMatchService.betMatchs;
   }
 
 }

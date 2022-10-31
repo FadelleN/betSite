@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-bet-summary',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetSummaryComponent implements OnInit {
 
+  test: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

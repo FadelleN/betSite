@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BetButton } from '../models/bet-button.model'
+import { BetMatch } from '../models/bet-match.model';
 
 @Component({
   selector: 'app-bet-match',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetMatchComponent implements OnInit {
 
-  fakeArray = new Array(3);
+  @Input() betMatch!: BetMatch;
 
   constructor() { }
 

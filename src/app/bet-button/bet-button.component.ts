@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BetButton } from '../models/bet-button.model';
 
 @Component({
   selector: 'app-bet-button',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetButtonComponent implements OnInit {
 
+  town!: string;
+  odd!: number;
+
   clicked!: boolean;
 
+
+  @Input() betButton!: BetButton;
+
   constructor() {
+
   }
 
   ngOnInit(): void {
