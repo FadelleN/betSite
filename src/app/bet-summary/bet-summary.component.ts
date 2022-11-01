@@ -1,4 +1,6 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { BetButton } from '../models/bet-button.model';
+import { BetMatchService } from '../service/bet-match.service';
 
 @Component({
   selector: 'app-bet-summary',
@@ -7,10 +9,21 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
 })
 export class BetSummaryComponent implements OnInit {
 
-  test: number = 0;
+  selectedBets?: BetButton[];
 
-  constructor() { }
+  constructor(protected betMatchService: BetMatchService, private eRef: ElementRef) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  @HostListener('document:click')
+  clickout() {
+    this.selectedBets = []
+    for (let myBetMatch of this.betMatchService.betMatchs) {
+      for (const myBetButton of myBetMatch.betButtons) {
+        if (myBetButton.clicked == true) {
+          this.selectedBets?.push(myBetButton)
+        }
+      }
+    }
   }
 }

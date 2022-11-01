@@ -10,10 +10,21 @@ import { BetMatch } from '../models/bet-match.model';
 export class BetMatchComponent implements OnInit {
 
   @Input() betMatch!: BetMatch;
-
-  constructor() { }
+  betClicked?: BetButton;
 
   ngOnInit(): void {
   }
 
+  chooseBet(betClicked: BetButton) {
+    if (betClicked.clicked == true) {
+      betClicked.clicked = false
+      return
+    }
+
+    for (const betButton in this.betMatch.betButtons) {
+      this.betMatch.betButtons[betButton].clicked = false
+    }
+    
+    this.betMatch.betButtons[betClicked.id - 1].clicked = true
+  }
 }

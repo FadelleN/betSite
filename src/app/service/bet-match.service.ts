@@ -1,63 +1,83 @@
 import { Injectable } from '@angular/core';
-import { BetButton } from '../models/bet-button.model';
 import { BetMatch } from '../models/bet-match.model';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class BetMatchService {
 
-    betMatchs: BetMatch[] = [
+  betMatchs: BetMatch[] = [
+    {
+      id: 1,
+      name: "Nice - FC Lorient",
+      betButtons: [
         {
-            name: "Nice - FC Lorient",
-            betButtons: [
-                {
-                    town: "Nice",
-                    odd: 1.24
-                },
-                {
-                    town: "Draw",
-                    odd: 2.18
-                },
-                {
-                    town: "FC Lorient",
-                    odd: 2.57
-                },
-            ]
+          id: 1,
+          town: "Nice",
+          odd: 1.24,
+          clicked: false
         },
         {
-            name: "Paris SG - Lyon",
-            betButtons: [
-                {
-                    town: "Paris SG",
-                    odd: 1.12
-                },
-                {
-                    town: "Draw",
-                    odd: 2.5
-                },
-                {
-                    town: "Lyon",
-                    odd: 3.62
-                },
-            ]
+          id: 2,
+          town: "Draw",
+          odd: 2.18,
+          clicked: false
         },
         {
-            name: "Marseille - Montpellier",
-            betButtons: [
-                {
-                    town: "Marseille",
-                    odd: 1.77
-                },
-                {
-                    town: "Draw",
-                    odd: 2.51
-                },
-                {
-                    town: "Montpellier",
-                    odd: 2.9
-                }
-            ]
+          id: 3,
+          town: "FC Lorient",
+          odd: 2.57,
+          clicked: false
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: "Paris SG - Lyon",
+      betButtons: [
+        {
+          id: 1,
+          town: "Paris SG",
+          odd: 1.12,
+          clicked: false
+        },
+        {
+          id: 2,
+          town: "Draw",
+          odd: 2.5,
+          clicked: false
+        },
+        {
+          id: 3,
+          town: "Lyon",
+          odd: 3.62,
+          clicked: false
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: "Marseille - Montpellier",
+      betButtons: [
+        {
+          id: 1,
+          town: "Marseille",
+          odd: 1.77,
+          clicked: false
+        },
+        {
+          id: 2,
+          town: "Draw",
+          odd: 2.51,
+          clicked: false
+        },
+        {
+          id: 3,
+          town: "Montpellier",
+          odd: 2.9,
+          clicked: false
         }
-    ]
+      ]
+    }
+  ]
 }

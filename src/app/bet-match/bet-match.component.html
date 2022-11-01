@@ -3,5 +3,5 @@
         <img src="../../assets/bet.png" alt="pictogramme de pays">
         <span><b> &nbsp; {{ betMatch.name }} &nbsp;</b></span>
     </div>
-    <app-bet-button class="col-2 text-center" *ngFor="let betButton of betMatch.betButtons" [betButton]="betButton"></app-bet-button>
+    <app-bet-button class="col-2 text-center" *ngFor="let betButton of betMatch.betButtons" [betButton]="betButton" (click)="chooseBet(betButton)"></app-bet-button>
 </div>
