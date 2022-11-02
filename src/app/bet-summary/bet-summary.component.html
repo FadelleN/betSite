@@ -1,4 +1,4 @@
 <h5>Récapitulatif de vos paris</h5>
 <div class="mt-4 p-2 bg-white rounded">
 <p>nombre de paris jouées: {{ selectedBets?.length || 0}}</p>
-<p>Potentiel gain: {{ selectedBets || 0 }} €</p></div>
+<p>Potentiel gain: {{ potentialGain | number: '1.0-0'}} €</p></div>

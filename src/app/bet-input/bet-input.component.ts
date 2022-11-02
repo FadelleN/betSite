@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BetInputService } from '../service/bet-input.service';
 
 @Component({
   selector: 'app-bet-input',
@@ -8,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class BetInputComponent implements OnInit {
 
   ngOnInit(): void {
+  }
+
+  constructor(private betInputService: BetInputService) {  }
+
+  onKey(event: any) {
+    this.betInputService.betInput.bet = event.target.value;
   }
 
 }
